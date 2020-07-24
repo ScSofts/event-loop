@@ -9,12 +9,13 @@ struct my_event: public event_base{
         EVENT_HELLO
     };
     char data[25];
+    virtual ~my_event()override{std::cout << "auto delete event!" << std::endl;}
 };
 int main(){
     //must “new“ and shouldn't delete
     event_loop *loop = new event_loop;
     loop->set_handler(my_event::event_type::EVENT_HELLO,[](event_base* event){
-        std::cout << "Hello ,Received hello event,data="<<((my_event*)event)->data;
+        std::cout << "Hello ,Received hello event,data="<<((my_event*)event)->data<<std::endl;
     });
     loop->run_loop();
     auto event = new my_event;
