@@ -12,6 +12,7 @@ public:
         EVENT_START = 1L,
         EVENT_EXIT
     };
+    virtual ~event_base() = default;
     event_id id = event_type::EVENT_START;
 };
 
