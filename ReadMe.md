@@ -6,7 +6,7 @@ git clone <this repository>
 cd event-loop/src
 g++ loop.cc -c
 ```
-## example
+## Example
 See src/test.cc
 
 ### Warning: event_loop cannot be deleted! Use loop->exit(); and it will be deleted!
