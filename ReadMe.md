@@ -4,7 +4,7 @@
 ```bash
 git clone <this repository>
 cd event-loop/src
-g++ loop.cc -c
+clang++ loop.cc -c
 ```
 ## Example
 See src/test.cc
